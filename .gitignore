@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# Dataset files
+data/raw/
+data/processed/
+
+# VS Code
+.vscode/
