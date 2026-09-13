@@ -114,15 +114,29 @@ The project performs SQL analysis to answer questions such as:
 
 ## 🔍 Data Validation
 
-The project includes data quality checks for:
+The project includes data quality checks to validate the processed job data.
 
-- Total number of records
-- Unique job IDs
-- Missing job titles
-- Missing locations
-- Missing company names
-- Jobs without salary information
-- Jobs without experience information
+| Validation Check | Result |
+|---|---:|
+| Original records | 97,029 |
+| Records after duplicate removal | 96,782 |
+| Duplicate Job IDs | 3 |
+| Unique Job IDs | 96,679 |
+| Missing job titles | 0 |
+| Missing locations | 0 |
+| Missing companies | 0 |
+| Jobs without salary information | 64,536 |
+| Jobs without experience information | 12,934 |
+
+These checks help ensure that the data loaded into PostgreSQL is consistent and suitable for analysis.
+
+### Key Data Quality Findings
+
+- 247 duplicate rows were removed during transformation.
+- 3 Job IDs appear more than once in the processed dataset.
+- Job titles, locations, and company names contain no remaining blank values.
+- Salary information is unavailable for 64,536 job records.
+- Experience information is unavailable for 12,934 job records.
 
 ## ⚡ One-Click Pipeline Execution
 
