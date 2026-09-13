@@ -177,3 +177,20 @@ GROUP BY title
 HAVING COUNT(*) >= 10
 ORDER BY job_count DESC, avg_salary DESC
 LIMIT 20;
+
+-- 16. MOST DEMANDED TECHNICAL SKILLS
+
+SELECT
+    skill,
+    COUNT(*) AS job_count
+FROM (
+    SELECT
+        TRIM(skill) AS skill
+    FROM jobs,
+    UNNEST(STRING_TO_ARRAY("tagsAndSkills", ',')) AS skill
+    WHERE "tagsAndSkills" <> 'Unknown'
+) AS skills
+WHERE skill <> ''
+GROUP BY skill
+ORDER BY job_count DESC
+LIMIT 20;
