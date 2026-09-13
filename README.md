@@ -156,6 +156,54 @@ This project demonstrates practical experience with:
 - Python automation
 - Business-oriented data analysis
 
+## 📊 Key Analysis Results
+
+The ETL pipeline processed **96,782 job listings** after removing duplicate records.
+
+### 🔹 Top Technical Skills
+
+The SQL analysis identified the most frequently occurring skills in job postings:
+
+| Skill | Job Count |
+|---|---:|
+| Sales | 6,466 |
+| Management | 4,842 |
+| Project Management | 3,966 |
+| Python | 3,954 |
+| CSS | 3,780 |
+| Development | 3,277 |
+| SAP | 3,194 |
+| SQL | 2,203 |
+| Automation | 2,194 |
+| Java | 2,152 |
+
+### 🔹 Data Quality
+
+- Original records: **97,029**
+- Records after duplicate removal: **96,782**
+- Duplicate rows removed: **247**
+- Missing job titles: **0**
+- Missing locations: **0**
+- Unique Job IDs: **97,679**
+
+### 🔹 Analysis Performed
+
+The project uses PostgreSQL SQL queries to analyze:
+
+- Most demanded job titles
+- Top hiring locations
+- Average salary by job title
+- Companies with the highest number of job postings
+- Salary ranges
+- Experience requirements
+- Jobs by experience level
+- Most frequently required skills
+- Salary by location
+- Job posting recency
+- Job demand by currency
+- Data quality
+- Duplicate Job IDs
+
 ## 👩‍💻 Author
 
 **Bhavana**
